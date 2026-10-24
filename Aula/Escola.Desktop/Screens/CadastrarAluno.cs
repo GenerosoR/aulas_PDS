@@ -25,7 +25,7 @@ namespace Escola.Desktop.Screens
                 Codigo = txtCodigo.Text,
                 Nome = txtNome.Text,
                 Email = txtEmail.Text,
-                DataNascimento = pickerData.Value
+                DataNascimento = pickerData.Value.Date.ToUniversalTime()
             };
 
             var sucesso = service.Criar(aluno);
